@@ -1,0 +1,146 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+header {
+    background-color: rgb(43, 43, 43);
+    width: 100%;
+    height: 5rem;
+    position: fixed;
+    margin-top: -5rem;
+    border-bottom: solid 2px rgb(109, 208, 241);
+}
+
+
+nav li {
+    margin-top: 1rem;
+    padding: 1rem;
+    display: inline;
+    float: right;
+    background-color: rgb(43, 43, 43);
+    color: white;
+    font-size: 1.2rem;
+    font-family: "roboto mono";
+}
+
+#banner {
+    padding: 2rem;
+    width: 100%;
+    height: 30rem;
+    margin-top: 5rem;
+    background-image: url(./resources/AdobeStock_364597448.jpeg);
+    background-size: cover;
+}
+
+#title {
+    margin: 0 auto;
+    text-align: center;
+    font-family: rubik;
+    font-size: 2rem;
+    color: aliceblue;
+    background-color: rgb(43, 43, 43);
+    padding: 1rem;
+}
+
+#portrait {
+    height: 20rem;
+    float: right;
+    border: solid 2px rgb(43, 43, 43);
+    border-radius: 1rem;
+    margin-top: -8rem;
+}
+
+#largecog {
+    margin-top: 2rem;
+    margin-left: 4rem;
+    height: 10rem;
+    -webkit-animation:spin 3s linear infinite;
+    -moz-animation:spin 3s linear infinite;
+    animation:spin 3s linear infinite;
+    
+}
+
+#smallcog {
+    margin-top: 2rem;
+    height: 7rem;
+    margin-left: -1.8rem;
+    margin-bottom: 0.5rem;
+    -webkit-animation:spinsmall 2s linear infinite;
+    -moz-animation:spinsmall 2s linear infinite;
+    animation:spinsmall 2s linear infinite;
+}
+
+
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform:rotate(360deg);
+    }
+}
+
+@-moz-keyframes spinsmall {
+    100% {
+        -moz-transform: rotate(-360deg);
+    }
+}
+@-webkit-keyframes spinsmall {
+    100% {
+        -webkit-transform: rotate(-360deg);
+    }
+}
+@keyframes spinsmall {
+    100% {
+        -webkit-transform: rotate(-360deg);
+        transform:rotate(-360deg);
+    }
+}
