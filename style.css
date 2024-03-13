@@ -1,3 +1,9 @@
+html, body{
+    margin: 0; padding: 0; width: 100%;
+    height: 100%;
+    overflow-x: hidden !important;
+  }
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -42,18 +48,15 @@ table {
 	border-spacing: 0;
 }
 
-main {
-    width: 100%;
-}
+
 
 header {
     background-color: rgb(43, 43, 43);
     width: 100%;
     height: 5rem;
     position: fixed;
-    margin-top: -5rem;
     border-bottom: solid 2px rgb(109, 208, 241);
-    z-index: 1;
+    z-index: 9;
 }
 
 
@@ -167,12 +170,14 @@ nav li:hover {
 #aboutme {
     width: 100%;
     background-color: rgb(43, 43, 43);
-    height: 30rem;
+    height: fit-content;
+    padding-bottom: 5rem;
+    padding-top: 0rem;
 }
 
 #projects {
     width: 100%;
-    background-color: rgb(109, 208, 241);
+    background-color: rgb(238, 238, 238);
     height: fit-content;
 }
 
@@ -180,6 +185,8 @@ nav li:hover {
     color: rgb(43, 43, 43);
     padding-bottom: 1rem;
     border-bottom: 2px solid rgb(43, 43, 43);
+    font-family: "Roboto mono";
+    font-size: 1.5rem;
 }
 
 h2 {
@@ -189,12 +196,13 @@ h2 {
     margin: 0 auto;
     text-align: center;
     padding-top: 2rem;
+    padding-bottom: 1rem;
     margin-bottom: 1rem;
     width: 70%;
+    border-bottom: 2px solid rgb(109, 208, 241);
 }
 
 p {
-    border-top: 2px solid rgb(109, 208, 241);
     font-family: "Roboto mono";
     color: aliceblue;
     font-size: 1.2rem;
@@ -205,34 +213,117 @@ p {
     line-height: 1.2;
 }
 
+p a {
+    color: rgb(109, 208, 241);
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
 #projectcontainer {
-    height: 50rem;
+    height: fit-content;
     width: 100%;
+    padding-bottom: 3rem;
+    min-height: 25rem;
+    transition: 1s;
 }
 
-.foldercontainer {
-    position: relative;
-    text-align: center;
-    color: white;
-}
 
-#folderlabel {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
-}
 
 #projectcontainer img {
     height: 15rem;
     width: 25rem;
-    margin: 3rem;
+    margin-top: -25rem;
+    margin-left: 18rem;
     border: 2px solid rgb(43, 43, 43);
+    box-shadow:  -10px 10px 15px rgb(124, 124, 124);
+    position: fixed;
+    display: flex;
+    transition: 2s;
+    z-index: 3;
+}
+
+#projectcontainer img:hover {
+    scale: 1.1;
+    transition: 0.3s;
 }
 
 #projectcontainer #folder {
-    height: 25rem;
-    width: 40rem;
+    height: 20rem;
+    width: 35rem;
     border: none;
+    box-shadow: none;
+    z-index: 2;
+    position: static;
+    margin: 5rem;
+    animation: shake 0.45s infinite;
 }
+
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+#projectcontainer #folder:hover {
+    scale: 1.1;
+    border: none;
+    transition: 0.1s;
+    text-decoration: none;
+    cursor: grab;
+}
+
+#projectcontainer #folder:active {
+    scale: 1;
+}
+
+#projectcontainer #folder:visited {
+    animation-play-state: paused;
+    animation: none;
+}
+
+#filecontainer p {
+    color: aliceblue;
+    background-color: rgb(43, 43, 43);
+    text-align: center;
+    display: none;
+    margin-left: -3rem;
+    margin-top: -10rem;
+    float: right;
+    width: 40%;
+    padding: 2rem;
+    padding-left: 10rem;
+}
+
+#filecontainer {
+    display: inline-block;
+    margin-left: -10rem;
+}
+
+#skills {
+    background-color: rgb(43, 43, 43);
+    width: 100%;
+    height: 15rem;
+}
+
+#skillscontainer {
+    margin: 0 auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#skills img {
+    height: 3rem;
+}
+
+#contact h2 {
+    color: rgb(43, 43, 43);
+}
+
