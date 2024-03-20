@@ -48,15 +48,23 @@ table {
 	border-spacing: 0;
 }
 
+html, body {
+    scroll-behavior: smooth;
+  }
 
+/*header*/
 
 header {
     background-color: rgb(43, 43, 43);
     width: 100%;
-    height: 5rem;
+    min-height: 5rem;
+    height: fit-content;
     position: fixed;
     border-bottom: solid 2px rgb(109, 208, 241);
     z-index: 9;
+    display: flex;
+    justify-content: flex-end;
+    opacity: 0.9;
 }
 
 
@@ -167,6 +175,8 @@ nav li:hover {
     }
 }
 
+/* about me */
+
 #aboutme {
     width: 100%;
     background-color: rgb(43, 43, 43);
@@ -175,9 +185,11 @@ nav li:hover {
     padding-top: 0rem;
 }
 
+/*projects */
+
 #projects {
     width: 100%;
-    background-color: rgb(238, 238, 238);
+    background-color: rgb(86, 138, 156);
     height: fit-content;
 }
 
@@ -233,15 +245,13 @@ p a:hover {
 
 
 #projectcontainer img {
-    height: 15rem;
+    height: 14rem;
     width: 25rem;
-    margin-top: -25rem;
     margin-left: 18rem;
     border: 2px solid rgb(43, 43, 43);
-    box-shadow:  -10px 10px 15px rgb(124, 124, 124);
-    position: fixed;
+    box-shadow:  -10px 10px 15px rgb(34, 42, 67);
+    position: absolute;
     display: flex;
-    transition: 2s;
     z-index: 3;
 }
 
@@ -251,22 +261,24 @@ p a:hover {
 }
 
 #projectcontainer #folder {
-    height: 20rem;
-    width: 35rem;
+    height: 30%;
+    width: 30%;
     border: none;
     box-shadow: none;
     z-index: 2;
     position: static;
-    margin: 5rem;
-    animation: shake 0.45s infinite;
+    margin: 5rem auto;
 }
 
-@keyframes shake {
-    0% { transform: rotate(0deg); }
-    25% { transform: rotate(5deg); }
-    50% { transform: rotate(0eg); }
-    75% { transform: rotate(-5deg); }
-    100% { transform: rotate(0deg); }
+#projectcontainer #openfolder {
+    height: 30%;
+    width: 30%;
+    border: none;
+    box-shadow: none;
+    z-index: 2;
+    position: static;
+    margin: 5rem auto;
+    display: none;
 }
 
 #projectcontainer #folder:hover {
@@ -281,10 +293,6 @@ p a:hover {
     scale: 1;
 }
 
-#projectcontainer #folder:visited {
-    animation-play-state: paused;
-    animation: none;
-}
 
 #filecontainer p {
     color: aliceblue;
@@ -292,11 +300,26 @@ p a:hover {
     text-align: center;
     display: none;
     margin-left: -3rem;
-    margin-top: -10rem;
+    margin-top: -11rem;
     float: right;
     width: 40%;
     padding: 2rem;
+    padding-left: 4rem;
     padding-left: 10rem;
+    border-radius: 1rem;
+    flex-shrink: 1.5;
+}
+
+@media only screen and (max-width: 1080px) {
+    #filecontainer p {
+      margin-top: 1rem;
+      margin-bottom: 3rem;
+      padding-left: 2rem;
+      
+    }
+
+    
+
 }
 
 #filecontainer {
@@ -304,10 +327,13 @@ p a:hover {
     margin-left: -10rem;
 }
 
+/* skills */
+
 #skills {
     background-color: rgb(43, 43, 43);
     width: 100%;
-    height: 15rem;
+    height: fit-content;
+    min-height: 15rem;
 }
 
 #skillscontainer {
@@ -317,13 +343,23 @@ p a:hover {
     width: 70%;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 #skills img {
     height: 3rem;
+    padding: 2rem;
 }
 
-#contact h2 {
+
+footer {
+    width: 100%;
+    height: 10rem;
+    background-color: rgb(86, 138, 156);
+}
+
+footer h2 {
     color: rgb(43, 43, 43);
+    border: none;
+    padding-top: 4rem;
 }
-

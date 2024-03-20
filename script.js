@@ -25,6 +25,7 @@ largeCog.addEventListener('mouseout', forwards);
 //project animations
 
 const folder = document.getElementById('folder');
+const openFolder = document.getElementById('openfolder');
 
 const file1 = document.getElementById('folderimage1');
 const file2 = document.getElementById('folderimage2');
@@ -46,7 +47,7 @@ let labelBack = function() {
 }
 
 let filesOut = function() {
-    file1.style.marginTop = "1rem";
+    file1.style.marginTop = "-3rem";
     file1.style.position = "relative";
     file1.style.transition = "1s";
     caption1.style.display = "inline"
@@ -61,7 +62,10 @@ let filesOut = function() {
     file4.style.marginTop = "5rem";
     file4.style.position = "relative";
     file4.style.transition = "1s";
-    caption4.style.display = "inline"
+    caption4.style.display = "inline";
+    openFolder.style.display = "block";
+    folder.style.display = "none";
+    openFolder.addEventListener('click', filesIn);
     folder.removeEventListener('click', filesOut);
     folder.addEventListener('click', filesIn);
 }
@@ -79,6 +83,8 @@ let filesIn = function() {
     file4.style.marginTop = "-10rem";
     file4.style.position = "fixed";
     caption4.style.display = "none";
+    openFolder.style.display = "none";
+    folder.style.display = "block";
     folder.removeEventListener('click', filesIn);
     folder.addEventListener('click', filesOut);
 }
