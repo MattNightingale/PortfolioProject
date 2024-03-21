@@ -48,6 +48,8 @@ table {
 	border-spacing: 0;
 }
 
+/* styling */
+
 body {
     background-color: rgb(43, 43, 43);
 }
@@ -56,7 +58,7 @@ header {
     background-color: rgb(43, 43, 43);
     width: 100%;
     min-height: 5rem;
-    height: fit-content;
+    height: 5rem;
     position: fixed;
     border-bottom: solid 2px rgb(109, 208, 241);
     z-index: 9;
@@ -91,3 +93,46 @@ nav li:hover {
     transition: 0.2s;
 }
 
+#contact {
+    margin-top: 5rem;
+    width: 100%;
+}
+
+#contact h2 {
+    font-family: "Roboto mono";
+    color: aliceblue;
+    font-size: 1.5rem;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 6rem;
+    padding-bottom: 1rem;
+    margin-bottom: 6rem;
+    width: 70%;
+    border-bottom: 2px solid rgb(109, 208, 241);
+}
+
+#icons {
+    margin: 0 auto;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid rgb(109, 208, 241);
+    padding-bottom: 6rem;
+}
+
+#icons img {
+    height: 5rem;
+}
+
+#icons img:hover {
+    scale: 1.1;
+}
+
+#contact p {
+    color: rgb(109, 208, 241);
+    font-family: "Roboto mono";
+    font-size: 1rem;
+    margin: 0 auto;
+    margin-top: 4rem;
+    text-align: center;
+}
