@@ -330,6 +330,7 @@ p a:hover {
     position: fixed;
     display: flex;
     z-index: 3;
+    transition: 1s;
 }
 
 #projectcontainer img:hover {
@@ -377,23 +378,22 @@ p a:hover {
     background-color: rgb(43, 43, 43);
     text-align: center;
     display: none;
-    margin-left: -4rem;
-    margin-top: -11rem;
+    margin-left: -5%;
+    margin-top: -12%;
     float: right;
     width: 40%;
-    padding: 2rem;
-    padding-left: 4rem;
-    padding-left: 10rem;
+    padding: 2%;
+    padding-left: 10%;
     border-radius: 1rem;
     flex-shrink: 1.5;
 }
 
 @media only screen and (max-width: 1080px) {
     #filecontainer p {
-      margin-top: 1rem;
-      margin-bottom: 3rem;
-      margin-right: 3rem;
-      padding-left: 2rem;
+      margin-top: 5%;
+      margin-bottom: 10%;
+      margin-right: 5%;
+      padding-left: 5%;
     }
 }
 
